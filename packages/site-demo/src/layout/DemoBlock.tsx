@@ -1,6 +1,8 @@
 import { Engine, EngineContext } from '@lumx/demo/context/engine';
 import { useHighlightedCode } from '@lumx/demo/layout/utils/useHighlightedCode';
 
+import { CodeBlock } from '@lumx/demo/layout/CodeBlock';
+
 import { mdiCodeTags } from '@lumx/icons';
 import { Button, Emphasis, Switch, SwitchPosition, Theme } from '@lumx/react';
 
@@ -163,12 +165,8 @@ const DemoBlock: React.FC<IDemoBlockProps> = ({
                 )}
             </div>
 
-            {showCode && highlightedCode && (
-                <div className="demo-block__code">
-                    <pre>
-                        <code dangerouslySetInnerHTML={{ __html: highlightedCode }} />
-                    </pre>
-                </div>
+            {showCode && (
+                <CodeBlock language={engine === 'react' ? 'tsx' : 'html'}>{get(code, [engine, 'code'])}</CodeBlock>
             )}
         </div>
     );

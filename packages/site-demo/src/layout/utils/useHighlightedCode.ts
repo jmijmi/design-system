@@ -8,6 +8,8 @@ import 'prismjs/components/prism-jsx';
 
 import 'prismjs/components/prism-tsx';
 
+import 'prismjs/components/prism-scss';
+
 import 'prismjs/themes/prism-coy.css';
 
 function useHighlightedCode(sourceCode: string, language: string): string {
