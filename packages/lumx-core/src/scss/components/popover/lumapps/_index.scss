@@ -3,6 +3,7 @@
    ========================================================================== */
 
 .#{$lumx-base-prefix}-popover {
+    z-index: map-get($lumx-base-layers, 'medium');
     background-color: lumx-theme-color-variant('light', 'N');
     border-radius: $lumx-theme-border-radius;
 
